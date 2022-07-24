@@ -8,6 +8,7 @@ import androidx.core.widget.doOnTextChanged
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +35,20 @@ class MainActivity : AppCompatActivity() {
 
         if (peso != null && altura != null){
             val imc = peso / (altura * altura)
-            titleTXT.text = "Seu IMC é:\n    %.2f" .format(imc)
+            var result = ""
+            if (imc >= 25.0) {
+                result = "Acima do Peso"
+                pesoacima.text = result
+
+            } else if (imc < 18.5) {
+                result = "Abaixo do Peso"
+                pesoabaixo.text = result
+            } else {
+                result = "Peso Ideal"
+                pesoideal.text = result
+            }
+            titleTXT.text = "IMC: %.2f" .format(imc);
         }
+
     }
 }
