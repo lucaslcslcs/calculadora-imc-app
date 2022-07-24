@@ -1,52 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTXT"
+        style="@style/title_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/imcTXT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/pesoEDT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/pesoEDT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/pesoTXT"
         style="@style/input_style"
-        android:autofillHints="" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="36dp"
+        android:autofillHints=""
+        android:hint="@string/pesoTXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/alturaEDT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/alturaTXT"
         style="@style/input_style"
-        android:autofillHints="" />
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="64dp"
+        android:autofillHints=""
+        android:hint="@string/alturaTXT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesoEDT" />
 
-        <Button
-            android:id="@+id/calcularBTN"
-            android:backgroundTint="@android:color/holo_blue_light"
-            android:text="@string/calcularTXT"
-            android:padding="16dp"
-            android:textSize="16sp"
-            android:layout_marginEnd="24dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/calcularBTN"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:padding="16dp"
+        android:text="@string/calcularTXT"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alturaEDT" />
 
-        <TextView
-            android:id="@+id/titleTXT"
-            style="@style/title_purple"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/imcTXT"
-            android:textSize="48sp" />
 
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
