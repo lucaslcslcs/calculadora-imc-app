@@ -7,13 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titleTXT"
-        style="@style/title_purple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/imcTXT"
-        android:textSize="48sp" />
     <EditText
         android:id="@+id/pesoEDT"
         android:layout_width="match_parent"
@@ -28,14 +21,32 @@
         android:hint="@string/alturaTXT"
         style="@style/input_style"
         android:autofillHints="" />
-    <Button
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:text="@string/calcularTXT"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:layout_marginTop="46dp"
+    <LinearLayout
+        android:layout_marginTop="24dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/calcularBTN"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="@string/calcularTXT"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginEnd="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/titleTXT"
+            style="@style/title_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imcTXT"
+            android:textSize="48sp" />
+
+
+    </LinearLayout>
 
 </LinearLayout>
