@@ -12,7 +12,13 @@
 
 #### Calculo
 
+
+
 <img src="https://user-images.githubusercontent.com/107368652/181019167-486023a9-dd84-4cc2-bf0d-0658423e3f42.png" width="300" height="500" />
+
+
+
+https://user-images.githubusercontent.com/107368652/181043748-ff09b88d-4694-4451-9a34-da5173df8e8d.mp4
 
 
 ### 👨🏽‍💻 Linguagem 
