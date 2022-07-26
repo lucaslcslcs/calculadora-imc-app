@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculadora IMC App</string>
+    <string name="app_name">IMC Calculadora</string>
     <string name="calcularTXT">Calcular</string>
     <string name="imcTXT">IMC</string>
     <string name="alturaTXT">Altura (ex: 1.75 m)</string>
